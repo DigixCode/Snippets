@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>bprop</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Code snippet for an automatically implemented $name$Property
+Language Version: C# 3.0 or higher</Description>
+      <HelpUrl>
+      </HelpUrl>
+      <Shortcut>bprop</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>name</ID>
+          <ToolTip>name</ToolTip>
+          <Default>name</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>owner</ID>
+          <ToolTip>owner</ToolTip>
+          <Default>Owner</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>type</ID>
+          <ToolTip>type</ToolTip>
+          <Default>Type</Default>
+          <Function>
+          </Function>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp"><![CDATA[public static readonly BindableProperty $name$Property = BindableProperty.Create("$name$", typeof($type$), typeof($owner$),default($type$));
+
+public $type$ $name$
+{
+    get { return ($type$)GetValue($name$Property); }
+    set { SetValue($name$Property, value); }
+}$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
